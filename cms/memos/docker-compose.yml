@@ -1,0 +1,15 @@
+services:
+  app:
+    image: neosmemo/memos:stable
+    restart: always
+    depends_on:
+      - db
+    environment:
+      MEMOS_DRIVER: $DB_DRIVER
+      MEMOS_DSN: "user=$DB_USERNAME password=$DB_PASSWORD dbname=$DB_NAME host=$DB_HOST sslmode=disable"
+    networks:
+      - caddy-network
+
+networks:
+  caddy-network:
+    external: true

@@ -1565,6 +1565,55 @@
           "default": "db"
         }
       ]
+    },
+    {
+      "id": 72,
+      "type": 3,
+      "title": "Memos",
+      "description": "Memos as stack | Any DB",
+      "categories": ["CMS"],
+      "platform": "linux",
+      "logo": "https://www.usememos.com/logo-rounded.png",
+      "repository": {
+        "url": "https://github.com/Bitnik212/portainer-templates",
+        "stackfile": "cms/memos/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "DB_NAME",
+          "label": "Database Name",
+          "default": "memos_main"
+        },
+        {
+          "name": "DB_USERNAME",
+          "label": "Database Username",
+          "default": "memos_user"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "label": "Database User Password"
+        },
+        {
+          "name": "DB_HOST",
+          "label": "Database hostname",
+          "default": "db"
+        },
+        {
+          "name": "DB_DRIVER",
+          "label": "Database driver",
+          "select": [
+            {
+              "text": "MySQL (version 8.0 or higher is recommended)",
+              "value": "mysql"
+            },
+            {
+              "text": "PostgreSQL (Starting from version 0.18.0)",
+              "value": "postgres",
+              "default": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
