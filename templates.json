@@ -1537,7 +1537,7 @@
       "type": 3,
       "title": "Memos",
       "description": "Memos as stack | Postgres 16.1",
-      "categories": ["CMS", "CaddyNetwork"],
+      "categories": ["CMS"],
       "platform": "linux",
       "logo": "https://www.usememos.com/logo-rounded.png",
       "repository": {
@@ -1558,6 +1558,11 @@
         {
           "name": "DB_PASSWORD",
           "label": "Database User Password"
+        },
+        {
+          "name": "DB_HOST",
+          "label": "Database hostname",
+          "default": "db"
         }
       ]
     }
