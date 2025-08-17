@@ -1,0 +1,32 @@
+services:
+  app:
+    image: neosmemo/memos:stable
+    restart: always
+    depends_on:
+      - db
+    environment:
+      MEMOS_DRIVER: "postgres"
+      MEMOS_DSN: "user=$DB_USERNAME password=$DB_PASSWORD dbname=$DB_NAME host=db sslmode=disable"
+    networks:
+      - caddy-network
+      - local
+
+  db:
+    image: postgres:16.1
+    restart: always
+    volumes:
+      - "data:/var/lib/postgresql/data/"
+    environment:
+      POSTGRES_USER: $DB_USERNAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_DB: $DB_NAME
+    networks:
+      - local
+
+volumes:
+  data:
+
+networks:
+  local:
+  caddy-network:
+    external: true
