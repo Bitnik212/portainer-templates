@@ -1537,27 +1537,29 @@
       "type": 3,
       "title": "Memos",
       "description": "Memos as stack | Postgres 16.1",
-      "categories": ["cms"],
+      "categories": ["CMS", "CaddyNetwork"],
       "platform": "linux",
       "logo": "https://www.usememos.com/logo-rounded.png",
       "repository": {
         "url": "https://github.com/Bitnik212/portainer-templates",
-        "stackfile": "cms/memos/docker-compose.yml"
+        "stackfile": "cms/memos/postgres/docker-compose.yml"
       },
       "env": [
         {
           "name": "DB_NAME",
-          "label": "Database Name"
+          "label": "Database Name",
+          "default": "memos_main"
         },
         {
           "name": "DB_USERNAME",
-          "label": "Database Username"
+          "label": "Database Username",
+          "default": "memos_user"
         },
         {
           "name": "DB_PASSWORD",
           "label": "Database User Password"
         }
       ]
-    }
+    },
   ]
 }
