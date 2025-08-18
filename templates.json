@@ -1624,6 +1624,49 @@
           ]
         }
       ]
+    },
+    {
+      "id": 73,
+      "type": 3,
+      "title": "Nginx Proxy Manager",
+      "description": "Nginx Proxy Manager as stack | PostgreSQL Instance",
+      "note": "Please create docker network `proxy` with attachable=true before creating stack",
+      "categories": ["webserver"],
+      "platform": "linux",
+      "logo": "https://nginxproxymanager.com/icon.png",
+      "repository": {
+        "url": "https://github.com/Bitnik212/portainer-templates",
+        "stackfile": "webserver/nginx-proxy-manager/postgres/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "DB_NAME",
+          "label": "Database Name",
+          "default": "npm_default"
+        },
+        {
+          "name": "DB_USERNAME",
+          "label": "Database Username",
+          "default": "npm_user"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "label": "Database User Password"
+        },
+        {
+          "name": "VERSION",
+          "label": "Nginx Proxy Manager Version",
+          "default": "2.12.6"
+        },
+        {
+          "name": "INITIAL_ADMIN_EMAIL",
+          "label": "Nginx Proxy Manager Admin Email"
+        },
+        {
+          "name": "INITIAL_ADMIN_PASSWORD",
+          "label": "Nginx Proxy Manager Admin Password"
+        }
+      ]
     }
   ]
 }
