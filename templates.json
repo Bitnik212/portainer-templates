@@ -1586,13 +1586,11 @@
       "env": [
         {
           "name": "DB_NAME",
-          "label": "Database Name",
-          "default": "memos_main"
+          "label": "Database Name"
         },
         {
           "name": "DB_USERNAME",
-          "label": "Database Username",
-          "default": "memos_user"
+          "label": "Database Username"
         },
         {
           "name": "DB_PASSWORD",
@@ -1600,8 +1598,7 @@
         },
         {
           "name": "DB_HOST",
-          "label": "Database hostname",
-          "default": "db"
+          "label": "Database hostname"
         },
         {
           "name": "VERSION",
