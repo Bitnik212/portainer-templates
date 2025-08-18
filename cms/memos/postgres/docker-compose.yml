@@ -8,7 +8,7 @@ services:
       MEMOS_DRIVER: "postgres"
       MEMOS_DSN: "user=$DB_USERNAME password=$DB_PASSWORD dbname=$DB_NAME host=$DB_HOST sslmode=disable"
     networks:
-      - caddy-network
+      - proxy
       - local
 
   db:
@@ -28,5 +28,5 @@ volumes:
 
 networks:
   local:
-  caddy-network:
+  proxy:
     external: true
