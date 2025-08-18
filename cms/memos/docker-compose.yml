@@ -1,6 +1,6 @@
 services:
   app:
-    image: neosmemo/memos:stable
+    image: neosmemo/memos:$VERSION
     restart: always
     environment:
       MEMOS_DRIVER: $DB_DRIVER

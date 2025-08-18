@@ -1563,6 +1563,11 @@
           "name": "DB_HOST",
           "label": "Database hostname",
           "default": "db"
+        },
+        {
+          "name": "VERSION",
+          "label": "Memos Version",
+          "default": "0.25.0"
         }
       ]
     },
@@ -1597,6 +1602,11 @@
           "name": "DB_HOST",
           "label": "Database hostname",
           "default": "db"
+        },
+        {
+          "name": "VERSION",
+          "label": "Memos Version",
+          "default": "0.25.0"
         },
         {
           "name": "DB_DRIVER",
