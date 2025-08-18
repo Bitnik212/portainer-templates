@@ -1536,7 +1536,7 @@
       "id": 71,
       "type": 3,
       "title": "Memos",
-      "description": "Memos as stack | Postgres 16.1",
+      "description": "Memos as stack | Postgres 16.1 Instance",
       "categories": ["CMS"],
       "platform": "linux",
       "logo": "https://www.usememos.com/logo-rounded.png",
@@ -1575,13 +1575,13 @@
       "id": 72,
       "type": 3,
       "title": "Memos",
-      "description": "Memos as stack | Any DB",
+      "description": "Memos as stack | Postgres | No intance",
       "categories": ["CMS"],
       "platform": "linux",
       "logo": "https://www.usememos.com/logo-rounded.png",
       "repository": {
         "url": "https://github.com/Bitnik212/portainer-templates",
-        "stackfile": "cms/memos/docker-compose.yml"
+        "stackfile": "cms/memos/postgres/no-instance/docker-compose.yml"
       },
       "env": [
         {
@@ -1611,17 +1611,8 @@
         {
           "name": "DB_DRIVER",
           "label": "Database driver",
-          "select": [
-            {
-              "text": "MySQL (version 8.0 or higher is recommended)",
-              "value": "mysql"
-            },
-            {
-              "text": "PostgreSQL (Starting from version 0.18.0)",
-              "value": "postgres",
-              "default": true
-            }
-          ]
+          "default": "postgres",
+          "preset": true
         }
       ]
     },
