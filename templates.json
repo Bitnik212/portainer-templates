@@ -1655,6 +1655,48 @@
           "label": "Nginx Proxy Manager Admin Password"
         }
       ]
+    },
+    {
+      "id": 74,
+      "type": 3,
+      "title": "Memos",
+      "description": "Memos as stack | MySQL | No intance",
+      "categories": ["CMS"],
+      "platform": "linux",
+      "logo": "https://www.usememos.com/logo-rounded.png",
+      "repository": {
+        "url": "https://github.com/Bitnik212/portainer-templates",
+        "stackfile": "cms/memos/mysql/no-instance/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "DB_NAME",
+          "label": "Database Name"
+        },
+        {
+          "name": "DB_USERNAME",
+          "label": "Database Username"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "label": "Database User Password"
+        },
+        {
+          "name": "DB_HOST",
+          "label": "Database hostname"
+        },
+        {
+          "name": "VERSION",
+          "label": "Memos Version",
+          "default": "0.25.0"
+        },
+        {
+          "name": "DB_DRIVER",
+          "label": "Database driver",
+          "default": "mysql",
+          "preset": true
+        }
+      ]
     }
   ]
 }
