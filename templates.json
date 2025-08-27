@@ -1697,6 +1697,26 @@
           "preset": true
         }
       ]
+    },
+    {
+      "id": 75,
+      "type": 3,
+      "title": "Pocketbase",
+      "description": "Pocketbase as stack | SQLite Instance",
+      "categories": ["database"],
+      "platform": "linux",
+      "logo": "https://pocketbase.io/images/logo.svg",
+      "repository": {
+        "url": "https://github.com/Bitnik212/portainer-templates",
+        "stackfile": "database/pocketbase/sqlite/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "VERSION",
+          "label": "Pocketbase Version",
+          "default": "0.25.9"
+        }
+      ]
     }
   ]
 }
