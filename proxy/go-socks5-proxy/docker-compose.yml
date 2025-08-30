@@ -1,0 +1,11 @@
+services:
+  app:
+    image: serjs/go-socks5-proxy
+    ports:
+      - "$PROXY_PORT:$PROXY_PORT"
+    environment:
+      PROXY_USER: $PROXY_USER
+      PROXY_PASSWORD: $PROXY_PASSWORD
+      ALLOWED_DEST_FQDN: $ALLOWED_DEST_FQDN
+      PROXY_PORT: $PROXY_PORT
+      ALLOWED_IPS: $ALLOWED_IPS

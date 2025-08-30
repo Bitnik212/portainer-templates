@@ -1717,6 +1717,46 @@
           "default": "0.25.9"
         }
       ]
+    },
+    {
+      "id": 76,
+      "type": 3,
+      "title": "SOCKS5 Proxy",
+      "description": "Socks5 proxy",
+      "categories": ["proxy"],
+      "platform": "linux",
+      "logo": "https://storage.yandexcloud.net/bit-static/proxy.png",
+      "repository": {
+        "url": "https://github.com/Bitnik212/portainer-templates",
+        "stackfile": "proxy/go-socks5-proxy/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "PROXY_USER",
+          "label": "Set proxy user (also required existed PROXY_PASS)",
+          "default": ""
+        },
+        {
+          "name": "PROXY_PASSWORD",
+          "label": "Set proxy password for auth, used with PROXY_USER",
+          "default": ""
+        },
+        {
+          "name": "ALLOWED_DEST_FQDN",
+          "label": "Allowed destination address regular expression pattern. Default allows all.",
+          "default": ""
+        },
+        {
+          "name": "PROXY_PORT",
+          "label": "Set listen port for application inside docker container",
+          "default": "1080"
+        },
+        {
+          "name": "ALLOWED_IPS",
+          "label": "Set allowed IP's that can connect to proxy, separator `,`",
+          "default": ""
+        }
+      ]
     }
   ]
 }
